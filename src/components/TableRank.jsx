@@ -10,9 +10,9 @@ function TableRank() {
             <tr className="text-center">
               <th  scope="col">#</th>
               <th  scope="col">Nombre</th>
-              <th scope="col">REP PREVIA</th>
-              <th scope="col">REP ACTUAL</th>
-              <th scope="col">REP 1M</th>
+           <th scope="col">REP ACTUAL</th>
+              <th scope="col">Last 15s</th>
+              <th scope="col">REP 1m</th>
             </tr>
           </thead>
           <tbody>

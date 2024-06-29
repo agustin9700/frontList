@@ -1,13 +1,14 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react';
 import axios from 'axios';
 
 function Celda() {
     const [data, setData] = useState([]);
+    const [data2, setData2] = useState([]);
 
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const res = await axios.get('https://backlist-836z.onrender.com/api2');
+                const res = await axios.get('https://backlist-836z.onrender.com/api');
                 setData(res.data);
             } catch (err) {
                 console.log(err);
@@ -18,7 +19,22 @@ function Celda() {
         const interval = setInterval(fetchData, 5000);
         return () => clearInterval(interval);
     }, []);
-    console.log(data)
+
+    useEffect(() => {
+        const fetchData2 = async () => {
+            try {
+                const res = await axios.get('https://backlist-836z.onrender.com/api2');
+                setData2(res.data);
+            } catch (err) {
+                console.log(err);
+            }
+        };
+
+        fetchData2();
+        const interval = setInterval(fetchData2, 5000);
+        return () => clearInterval(interval);
+    }, []);
+   
 
     return (
         <>
@@ -26,15 +42,15 @@ function Celda() {
                 <tr key={i} className="text-center">
                     <th className='fw-bold' scope="row">{item.id}</th>
                     <td className='fw-bold'>{item.Nombre}</td>
-                    <td className='fw-bold ' >{item.ReputacionOriginal}</td>
-                    <td className='fw-bold '>{item.NuevaReputacion}</td>
+                    <td className='fw-bold'>{item.NuevaReputacion}</td>
+                    <td className={data2[i]>10?'text-success fw-bold':'text-danger fw-bold'}>{data2[i] ? data2[i].Diferencia : 'N/A'}</td>
                     <td className={item.Diferencia > 45 ? 'text-success fw-bold' : item.Diferencia < 45 ? 'text-danger fw-bold' : ''}>
                         {item.Diferencia > 0 ? '+' : ''}{item.Diferencia}
                     </td>
                 </tr>
             ))}
         </>
-    )
+    );
 }
 
-export default Celda
+export default Celda;
