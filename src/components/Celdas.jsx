@@ -31,7 +31,7 @@ function Celda() {
     };
 
     fetchData2();
-    const interval = setInterval(fetchData2, 5000);
+    const interval = setInterval(fetchData2, 3000);
     return () => clearInterval(interval);
   }, []);
 
