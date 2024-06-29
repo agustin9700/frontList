@@ -50,7 +50,7 @@ function Celda() {
               data2[i]
                 ? data2[i].Diferencia === 0
                   ? "text-danger fw-bold"
-                  : data2[i].Diferencia < 45
+                  : data2[i].Diferencia < 12
                   ? "text-warning fw-bold"
                   : "text-success fw-bold"
                 : "text-danger fw-bold"
