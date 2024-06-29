@@ -43,7 +43,7 @@ function Celda() {
                     <th className='fw-bold' scope="row">{item.id}</th>
                     <td className='fw-bold'>{item.Nombre}</td>
                     <td className='fw-bold'>{item.NuevaReputacion}</td>
-                    <td className={data2[i]>10?'text-success fw-bold':'text-danger fw-bold'}>{data2[i] ? data2[i].Diferencia : 'N/A'}</td>
+                    <td className={data2[i]<10?'text-danger fw-bold':'text-success fw-bold'}>{data2[i] ? data2[i].Diferencia : 'N/A'}</td>
                     <td className={item.Diferencia > 45 ? 'text-success fw-bold' : item.Diferencia < 45 ? 'text-danger fw-bold' : ''}>
                         {item.Diferencia > 0 ? '+' : ''}{item.Diferencia}
                     </td>
