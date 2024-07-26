@@ -6,7 +6,7 @@ import PropTypes from 'prop-types'
 function Layaout({children}) {
   return (
     <div className="bg-dark p-5 fw-bold fs-5  ">
-       <div className="container px-5">
+       <div className="container ">
        <Nav />
 
        {children}
