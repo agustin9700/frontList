@@ -1,17 +1,21 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
+import "./Celdas.css"; // Asegúrate de tener un archivo CSS separado para estilos
 
 function Celda() {
   const [data, setData] = useState([]);
   const [data2, setData2] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
         const res = await axios.get("https://backlist-836z.onrender.com/api");
         setData(res.data);
+        setLoading(false);
       } catch (err) {
         console.log(err);
+        setLoading(false);
       }
     };
 
@@ -35,7 +39,14 @@ function Celda() {
     return () => clearInterval(interval);
   }, []);
 
- 
+  if (loading) {
+    return (
+      <div className="loader-container">
+        <div className="loader"></div>
+      </div>
+    );
+  }
+
   return (
     <>
       {data.map((item, i) => (
