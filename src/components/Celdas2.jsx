@@ -11,7 +11,7 @@ function Celdas2() {
         const fetchData = async () => {
             try {
                 const res = await axios.get("https://backrank.onrender.com/");
-                console.log("Data received:", res.data);
+                // console.log("Data received:", res.data);
                 setData(res.data);
                 setLoading(false);
             } catch (err) {
@@ -29,7 +29,7 @@ function Celdas2() {
         const fetchData2 = async () => {
             try {
                 const res = await axios.get("https://backrank.onrender.com/users");
-                console.log("Users received:", res.data);
+                // console.log("Users received:", res.data);
                 setData2(res.data);
             } catch (err) {
                 console.error("Error fetching users:", err);
