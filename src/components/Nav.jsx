@@ -20,7 +20,7 @@ function Nav() {
           } 
           to="/members"
         >
-          Miembros
+          Members
         </NavLink>
       </li>
      
