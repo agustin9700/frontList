@@ -20,7 +20,7 @@ function Celda() {
     };
 
     fetchData();
-    const interval = setInterval(fetchData, 2000);
+    const interval = setInterval(fetchData, 1000);
     return () => clearInterval(interval);
   }, []);
 
@@ -35,7 +35,7 @@ function Celda() {
     };
 
     fetchData2();
-    const interval = setInterval(fetchData2, 2000);
+    const interval = setInterval(fetchData2, 1000);
     return () => clearInterval(interval);
   }, []);
 
