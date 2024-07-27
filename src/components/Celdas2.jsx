@@ -21,7 +21,7 @@ function Celdas2() {
         };
 
         fetchData();
-        const interval = setInterval(fetchData, 1000);
+        const interval = setInterval(fetchData, 2000);
         return () => clearInterval(interval);
     }, []);
 
@@ -37,7 +37,7 @@ function Celdas2() {
         };
 
         fetchData2();
-        const interval = setInterval(fetchData2, 1000);
+        const interval = setInterval(fetchData2, 2000);
         return () => clearInterval(interval);
     }, []);
 
