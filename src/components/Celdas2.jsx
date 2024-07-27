@@ -57,7 +57,7 @@ function Celdas2() {
                         {item.puesto}
                     </th>
                     <td className="fw-bold">{item.nombre} (ID:{item.id})</td>
-                    <td className="fw-bold">{item.reputacion}</td>
+                    
                     <td
                         className={
                             item.gap === 0
@@ -68,6 +68,17 @@ function Celdas2() {
                         }
                     >
                         {item.gap}
+                    </td>
+                    <td
+                        className={
+                            item.gap === 0
+                                ? "text-success fw-bold"
+                                : item.gap < 1500
+                                    ? "text-warning fw-bold"
+                                    : "text-danger fw-bold"
+                        }
+                    >
+                        {item.gapsuperior}
                     </td>
                     <td
                         className={
@@ -94,6 +105,7 @@ function Celdas2() {
                     >
                         {data2[i] ? data2[i].diferencia : "N/A"}
                     </td>
+                    <td className="fw-bold">{item.reputacion}</td>
                 </tr>
             ))}
         </>

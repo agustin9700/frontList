@@ -8,14 +8,16 @@ function TableRankGeneral() {
     <div className="table-responsive">
       <table className="table table-hover table-striped">
         <thead className="table-dark">
-          <tr className="text-center">
-            <th  scope="col">#</th>
-            <th  scope="col">Clan Name</th>
-            <th scope="col">Reputacion</th>
-            <th scope="col">GAP</th>
-            <th scope="col">Last 15s</th>
-            <th scope="col">REP 1m</th>
-          </tr>
+        <tr className="text-center">
+  <th scope="col">#</th>
+  <th scope="col">Clan</th> 
+  <th scope="col">GAP</th> 
+  <th scope="col">REP↑</th> 
+  <th scope="col">Last 15s</th> 
+  <th scope="col">REP 1m</th> 
+  <th scope="col">Reputation</th> 
+</tr>
+
         </thead>
         <tbody>
            <Celdas2/>
