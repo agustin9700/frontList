@@ -54,7 +54,7 @@ function Celda() {
           <th className="fw-bold" scope="row">
             {item.id}
           </th>
-          <td className="fw-bold">{item.Nombre}</td>
+          <td className="fw-bold ">{item.Nombre}</td>
           <td className="fw-bold">{item.NuevaReputacion}</td>
           <td
             className={
