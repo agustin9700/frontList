@@ -11,7 +11,7 @@ function TableRankGeneral() {
         <tr className="text-center">
   <th scope="col">#</th>
   <th scope="col">Clan</th> 
-  <th scope="col">GAP</th> 
+  <th scope="col">GAP 1º</th> 
   <th scope="col">REP↑</th> 
   <th scope="col">Last 15s</th> 
   <th scope="col">REP 1m</th> 
