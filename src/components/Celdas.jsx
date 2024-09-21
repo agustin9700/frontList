@@ -46,7 +46,7 @@ function Celda() {
       </div>
     );
   }
-  console.log(data2);
+  
 
   return (
     <>

@@ -46,7 +46,7 @@ function Others() {
       </div>
     );
   }
-  console.log(data2);
+  
 
   return (
     <>
