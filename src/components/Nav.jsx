@@ -23,6 +23,16 @@ function Nav() {
           Members
         </NavLink>
       </li>
+      <li className="nav-item">
+        <NavLink 
+          className={({ isActive }) => 
+            isActive ? "nav-link active" : "nav-link"
+          } 
+          to="/others"
+        >
+          Others
+        </NavLink>
+      </li>
      
     </ul>
   )

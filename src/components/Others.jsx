@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import "./Celdas.css"; // Asegúrate de tener un archivo CSS separado para estilos
 
-function Celda() {
+function Others() {
   const [data, setData] = useState([]);
   const [data2, setData2] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -10,7 +10,7 @@ function Celda() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await axios.get("https://backlist-x1i1.onrender.com/api");
+        const res = await axios.get("https://backlist-x1i1.onrender.com/api4");
         setData(res.data);
         setLoading(false);
       } catch (err) {
@@ -27,7 +27,7 @@ function Celda() {
   useEffect(() => {
     const fetchData2 = async () => {
       try {
-        const res = await axios.get("https://backlist-x1i1.onrender.com/api2");
+        const res = await axios.get("https://backlist-x1i1.onrender.com/api3");
         setData2(res.data);
       } catch (err) {
         console.log(err);
@@ -88,4 +88,4 @@ function Celda() {
   );
 }
 
-export default Celda;
+export default Others;

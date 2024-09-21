@@ -48,6 +48,7 @@ function Celdas2() {
         </div>
       );
     }
+   
 
     return (
         <>
