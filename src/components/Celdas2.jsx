@@ -10,7 +10,7 @@ function Celdas2() {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const res = await axios.get("https://backrank.onrender.com/");
+                const res = await axios.get("https://backrank-1.onrender.com/");
                 // console.log("Data received:", res.data);
                 setData(res.data);
                 setLoading(false);
@@ -28,7 +28,7 @@ function Celdas2() {
     useEffect(() => {
         const fetchData2 = async () => {
             try {
-                const res = await axios.get("https://backrank.onrender.com/users");
+                const res = await axios.get("https://backrank-1.onrender.com/users");
                 // console.log("Users received:", res.data);
                 setData2(res.data);
             } catch (err) {
