@@ -57,7 +57,7 @@ function Celdas2() {
                     <th className="fw-bold" scope="row">
                         {item.puesto}
                     </th>
-                    <td className={item.nombre === "Elite Latina" ? "text-primary fw-bold" : "fw-bold"}>{item.nombre} (ID:{item.id})</td>
+                    <td className={item.nombre === "Alma Latina" ? "text-primary fw-bold" : "fw-bold"}>{item.nombre} (ID:{item.id})</td>
                     
                     <td
                         className={
